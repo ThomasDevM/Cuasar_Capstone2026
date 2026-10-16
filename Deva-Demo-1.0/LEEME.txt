@@ -1,0 +1,28 @@
+DEVA AESTHETIC HOUSE - SISTEMA DE GESTION (VERSION DE DEMOSTRACION)
+====================================================================
+
+QUE NECESITA
+  - Un computador con Windows y Node.js instalado (version LTS, gratis: https://nodejs.org).
+  - No necesita internet ni instalar una base de datos.
+
+COMO USARLO
+  1. Descomprima esta carpeta (clic derecho > Extraer todo).
+  2. Haga doble clic en "iniciar-sistema.bat". Se abre una ventana negra: NO la cierre.
+  3. En unos segundos se abre el navegador en http://localhost:3000
+  4. Ingrese con:
+        Direccion:    sandra        clave: Deva2026!
+        Profesional:  fmunoz        clave: Deva2026!   (tambien dtorres, mrojas, pcontreras)
+
+IMPORTANTE
+  - Todos los pacientes, citas y ventas son FICTICIOS. No ingrese datos reales de pacientes en esta version.
+  - Los datos quedan guardados en la carpeta "datos". Para volver a empezar, use "reiniciar-datos-demo.bat".
+  - Esta es una version de demostracion para un solo computador. La version de produccion se instala en un servidor
+    con base de datos PostgreSQL, HTTPS y respaldos (ver docs/DESPLIEGUE.md en el repositorio).
+  - Los recordatorios por WhatsApp abren WhatsApp con el mensaje listo; el envio por correo requiere configurar un correo.
+
+GUION DE LA DEMOSTRACION
+  Vea "GUION_DEMO.md" en esta carpeta.
+
+SI ALGO FALLA
+  - "Puerto en uso": cierre otras ventanas del sistema o reinicie el computador.
+  - La pagina no abre: espere 10 segundos y abra manualmente http://localhost:3000
