@@ -6,7 +6,7 @@ Proyecto APT (Capstone PTY4614) · Product Owner: Sandra Sánchez · Backlog en 
 
 ---
 
-## 1. Instalación paso a paso (con Docker)
+## 1. Instalación paso a paso 
 
 Docker es un programa que ejecuta el sistema y su base de datos en un «contenedor», sin instalar nada más.
 
