@@ -8,9 +8,9 @@ Proyecto APT (Capstone PTY4614) · Product Owner: Sandra Sánchez · Backlog en 
 
 ## 1. Instalación paso a paso (con Docker)
 
-Docker es un programa que ejecuta el sistema y su base de datos en un «contenedor», sin instalar nada más. Hay dos formas: **A) Windows** (la más simple, recomendada para el centro) y **B) servidor Linux**.
+Docker es un programa que ejecuta el sistema y su base de datos en un «contenedor», sin instalar nada más.
 
-### A) En un computador con Windows 10 u 11
+### En un computador con Windows 10 u 11
 
 **Qué necesita:** un computador con Windows 10/11 de 64 bits, 8 GB de memoria y conexión a internet (solo para instalar).
 
