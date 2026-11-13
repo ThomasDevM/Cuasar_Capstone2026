@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
+backups/
+data/
+*.sql.gz
+CLAVES-INICIALES.txt

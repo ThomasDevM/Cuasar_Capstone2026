@@ -1,0 +1,42 @@
+digraph ER {
+  graph [rankdir=LR, splines=ortho, nodesep=0.35, ranksep=0.9, fontname="Liberation Sans", bgcolor="white", pad=0.3];
+  node [shape=plain, fontname="Liberation Sans", fontsize=11];
+  edge [fontname="Liberation Sans", fontsize=12, fontcolor="#B03060", color="#5B2A6F", dir=none, penwidth=1.3, taillabel="1", headlabel="N", labeldistance=1.4];
+
+  Usuario [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#5B2A6F"><tr><td bgcolor="#5B2A6F"><font color="white"><b>Usuario</b></font></td></tr><tr><td align="left">id · username · password_hash<br align="left"/>rol (ADMIN|PROFESIONAL) · activo<br align="left"/></td></tr></table>>];
+  Profesional [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#5B2A6F"><tr><td bgcolor="#5B2A6F"><font color="white"><b>Profesional</b></font></td></tr><tr><td align="left">id · nombre · especialidad<br align="left"/>contrato (PORCENTAJE|OTRO) · turnos · activo<br align="left"/></td></tr></table>>];
+  Box [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#5B2A6F"><tr><td bgcolor="#5B2A6F"><font color="white"><b>Box</b></font></td></tr><tr><td align="left">id · nombre · activo<br align="left"/></td></tr></table>>];
+  Paciente [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#B67389"><tr><td bgcolor="#B67389"><font color="white"><b>Paciente</b></font></td></tr><tr><td align="left">id · rut (único) · nombre · edad<br align="left"/>celular · email · motivo_consulta<br align="left"/></td></tr></table>>];
+  Ficha [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#B67389"><tr><td bgcolor="#B67389"><font color="white"><b>Ficha</b></font></td></tr><tr><td align="left">id · paciente_id · antecedentes (JSONB)<br align="left"/>medicamentos · observaciones · actualizada_en<br align="left"/></td></tr></table>>];
+  Consentimiento [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#B67389"><tr><td bgcolor="#B67389"><font color="white"><b>Consentimiento</b></font></td></tr><tr><td align="left">id · paciente_id · tratamiento<br align="left"/>version_texto · firma_url · pdf_url · firmado_en<br align="left"/></td></tr></table>>];
+  Servicio [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#4C9A8B"><tr><td bgcolor="#4C9A8B"><font color="white"><b>Servicio</b></font></td></tr><tr><td align="left">id · nombre · precio · sesiones_defecto<br align="left"/>intervalo_mantencion_dias · activo<br align="left"/></td></tr></table>>];
+  Plan [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#4C9A8B"><tr><td bgcolor="#4C9A8B"><font color="white"><b>PlanTratamiento</b></font></td></tr><tr><td align="left">id · paciente_id · servicio_id<br align="left"/>sesiones_total · sesiones_realizadas<br align="left"/>origen (EVALUACION|DERIVACION) · estado<br align="left"/></td></tr></table>>];
+  Cita [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#4C9A8B"><tr><td bgcolor="#4C9A8B"><font color="white"><b>Cita</b></font></td></tr><tr><td align="left">id · plan_id? · paciente_id · profesional_id<br align="left"/>box_id · servicio_id · inicio · fin<br align="left"/>estado (AGENDADA|CONFIRMADA|REALIZADA|<br align="left"/>CANCELADA|REPROGRAMADA|INASISTENCIA) · nro_sesion<br align="left"/></td></tr></table>>];
+  Evolucion [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#4C9A8B"><tr><td bgcolor="#4C9A8B"><font color="white"><b>Evolución</b></font></td></tr><tr><td align="left">id · cita_id · observaciones<br align="left"/>procedimiento · recomendaciones<br align="left"/></td></tr></table>>];
+  Notificacion [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#D9A441"><tr><td bgcolor="#D9A441"><font color="white"><b>Notificación</b></font></td></tr><tr><td align="left">id · cita_id · canal (WHATSAPP|EMAIL)<br align="left"/>tipo · estado · enviada_en<br align="left"/></td></tr></table>>];
+  Venta [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#8E4A9E"><tr><td bgcolor="#8E4A9E"><font color="white"><b>Venta</b></font></td></tr><tr><td align="left">id · paciente_id · cita_id? · producto_id?<br align="left"/>monto · medio_pago · nro_boleta (manual, opcional)<br align="left"/>vendedor_id · pagada · fecha<br align="left"/></td></tr></table>>];
+  Producto [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#8E4A9E"><tr><td bgcolor="#8E4A9E"><font color="white"><b>Producto</b></font></td></tr><tr><td align="left">id · nombre · precio · stock · stock_minimo<br align="left"/></td></tr></table>>];
+  Regla [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#8E4A9E"><tr><td bgcolor="#8E4A9E"><font color="white"><b>ReglaComision</b></font></td></tr><tr><td align="left">id · profesional_id · servicio_id?<br align="left"/>porcentaje · vigente_desde<br align="left"/></td></tr></table>>];
+  Comision [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#8E4A9E"><tr><td bgcolor="#8E4A9E"><font color="white"><b>ComisionMensual</b></font></td></tr><tr><td align="left">id · profesional_id · mes<br align="left"/>base_ventas · monto · estado (ABIERTO|CERRADO)<br align="left"/></td></tr></table>>];
+  Auditoria [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" color="#6B7C93"><tr><td bgcolor="#6B7C93"><font color="white"><b>Auditoría</b></font></td></tr><tr><td align="left">id · usuario_id · accion · paciente_id?<br align="left"/>entidad · fecha_hora · ip<br align="left"/></td></tr></table>>];
+
+  Usuario -> Profesional [taillabel="1", headlabel="0..1"];
+  Usuario -> Auditoria;
+  Paciente -> Ficha [headlabel="1"];
+  Paciente -> Consentimiento;
+  Paciente -> Plan;
+  Servicio -> Plan;
+  Plan -> Cita;
+  Paciente -> Cita;
+  Profesional -> Cita;
+  Box -> Cita;
+  Servicio -> Cita;
+  Cita -> Evolucion;
+  Cita -> Notificacion;
+  Cita -> Venta;
+  Paciente -> Venta;
+  Producto -> Venta;
+  Profesional -> Regla;
+  Servicio -> Regla;
+  Profesional -> Comision;
+}

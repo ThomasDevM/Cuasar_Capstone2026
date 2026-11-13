@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deva Aesthetic House - Comisiones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="comisiones">
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header class="header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 20px;">
+            <h2 style="font-size: 1.5rem; color: var(--deva-mauve);">Comisiones por profesional</h2>
+        </header>
+
+        <section class="form-section filter-section">
+            <div class="filter-group">
+                <label for="mesComision">Mes:</label>
+                <select id="mesComision" class="status-select"></select>
+            </div>
+            <button id="btnExportar" class="btn-secondary" type="button">Exportar a Excel (CSV)</button>
+        </section>
+
+        <p class="subtitle">Comisión = valor del servicio × % del profesional. Solo cuentan atenciones realizadas y pagadas de profesionales con contrato por porcentaje.</p>
+
+        <div class="table-wrap">
+            <table id="tablaComisiones" class="table-simple">
+                <thead><tr><th>Profesional</th><th>Contrato</th><th>%</th><th>Atenciones pagadas</th><th>Ventas</th><th>Comisión</th></tr></thead>
+                <tbody id="cuerpoComisiones"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deva Aesthetic House - Panel Principal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <section class="form-section">
+            <h3>Bienvenida, <span id="saludo" style="color: var(--deva-gray);"></span></h3>
+            <p class="subtitle">Resumen operativo de la jornada de hoy</p>
+
+            <div class="grid-3" style="margin-top: 20px;">
+                <div class="metric-box"><h4>Citas Hoy</h4><p id="metricCitas">–</p></div>
+                <div class="metric-box"><h4>Fichas sin consentimiento</h4><p id="metricFichas">–</p></div>
+                <div class="metric-box"><h4 id="metricComisionLabel">Comisiones</h4><p id="metricComision">–</p></div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h3>Accesos Rápidos</h3>
+            <div class="grid-2">
+                <a href="ficha.html" class="action-box">
+                    <h4>📝 Crear Ficha Clínica</h4>
+                    <p>Registra un nuevo paciente, su historial y el consentimiento firmado.</p>
+                </a>
+                <a href="agenda.html" class="action-box">
+                    <h4>📅 Ver Agenda</h4>
+                    <p>Revisa citas, boxes y profesionales; cambia el estado de cada cita.</p>
+                </a>
+            </div>
+        </section>
+
+        <p class="subtitle" style="text-align:center;">Datos DEMO guardados en este navegador · <a href="#" id="resetDemo" class="btn-link">Restablecer datos demo</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deva Aesthetic House - Ficha de Ingreso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="ficha">
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <header class="header" style="border-bottom: none; padding-bottom: 0; margin-bottom: 20px;">
+            <h2 id="tituloFicha" style="font-size: 1.5rem; color: var(--deva-mauve);">Ficha de Ingreso Digital</h2>
+        </header>
+
+        <div id="fichaMsg" class="alert" hidden role="alert"></div>
+
+        <form id="fichaClinica" class="form-container" novalidate>
+
+            <section class="form-section">
+                <h3>Datos Personales</h3>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. María Pérez" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rut">Rut</label>
+                        <input type="text" id="rut" name="rut" placeholder="12.345.678-5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad" min="0" max="120">
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" placeholder="+56 9 ...">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="paciente@correo.cl">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="motivo">Motivo de Consulta</label>
+                        <textarea id="motivo" name="motivo" rows="3"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Historial Clínico</h3>
+                <p class="subtitle">Seleccione si presenta alguna de las siguientes condiciones:</p>
+                <div class="grid-3 checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="historial" value="hipertension"> Hipertensión</label>
+                    <label class="checkbox-label"><input type="checkbox" name="historial" value="diabetes"> Diabetes</label>
+                    <label class="checkbox-label"><input type="checkbox" name="historial" value="resistencia_insulina"> Resistencia a la insulina</label>
+                    <label class="checkbox-label"><input type="checkbox" name="historial" value="alergias"> Alergias/Dermatitis</label>
+                    <label class="checkbox-label"><input type="checkbox" name="historial" value="acne"> Acné</label>
+                    <label class="checkbox-label"><input type="checkbox" name="historial" value="rosacea"> Rosácea</label>
+                </div>
+                <div class="grid-2" style="margin-top:20px;">
+                    <div class="form-group">
+                        <label for="medicamentos">Medicamentos que consume</label>
+                        <textarea id="medicamentos" name="medicamentos" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="otras">Otras enfermedades u observaciones</label>
+                        <textarea id="otras" name="otras" rows="2"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Consentimiento informado</h3>
+                <p id="consentimientoEstado" class="alert alert-ok" hidden></p>
+                <div id="bloqueFirma">
+                    <p class="subtitle">Texto de ejemplo: el paciente declara haber sido informado sobre el tratamiento, sus riesgos y alternativas, y acepta realizarlo.</p>
+                    <label class="checkbox-label"><input type="checkbox" id="aceptaConsentimiento"> El paciente acepta el consentimiento informado</label>
+                    <p class="subtitle" style="margin-top:15px;">Firma del paciente (dibuje con el dedo o el mouse):</p>
+                    <canvas id="firmaCanvas" class="sig-canvas" width="600" height="180" aria-label="Recuadro de firma"></canvas>
+                    <button type="button" id="limpiarFirma" class="btn-secondary" style="margin-top:8px;">Limpiar firma</button>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Guardar Ficha</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

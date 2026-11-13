@@ -1,0 +1,37 @@
+﻿Clave Jira,Elemento,Estado a aplicar,Sprint,Observación
+SCRUM-19,HU-17 Iniciar sesión (Dirección y Profesional),RESUELTO,S1,
+SCRUM-15,HU-01 Registrar ficha clínica,RESUELTO,S1,
+SCRUM-16,HU-02 Consentimiento digital con firma,RESUELTO,S1,Texto oficial por cargar
+SCRUM-17,HU-03 Editar ficha y buscar paciente,RESUELTO,S1,
+SCRUM-18,HU-04 Evolución de sesión,RESUELTO,S1,
+SCRUM-45,"TEC-02 Modelo de datos inicial (PostgreSQL, SQL con migraciones)",RESUELTO,S1,
+SCRUM-46,TEC-03 Esqueleto front/back + Docker,RESUELTO,S1,
+SCRUM-44,"TEC-01 Repositorio GitHub, ramas y CI",En curso (se mantiene),S1,Falta publicar en GitHub
+SCRUM-20,HU-05 Agendar hora,RESUELTO,S2,
+SCRUM-21,HU-06 Reprogramar cita,RESUELTO,S2,
+SCRUM-22,HU-07 Recordatorio automático,RESUELTO,S2,Correo automático; WhatsApp asistido
+SCRUM-23,HU-08 Confirmar / registrar inasistencia,RESUELTO,S2,
+SCRUM-39,HU-19 Plan de tratamiento (N° de sesiones),RESUELTO,S2,
+SCRUM-24,HU-09 Historial del paciente,RESUELTO,S2,
+SCRUM-47,TEC-04 Plan de pruebas y criterios de calidad,RESUELTO,S2,70 pruebas automáticas
+SCRUM-40,"HU-20 Profesionales, turnos y boxes",En curso (se mantiene),S2,Los turnos son informativos: no bloquean la agenda
+SCRUM-25,HU-10 Alerta de mantención,RESUELTO,S3,
+SCRUM-26,HU-11 Registrar venta / cobro de atenciones,RESUELTO,S3,Boleta manual
+SCRUM-27,HU-12 Comisión automática,RESUELTO,S3,Conciliar con el Excel de un mes real
+SCRUM-41,HU-21 Catálogo de tratamientos y % de comisión,RESUELTO,S3,
+SCRUM-29,HU-18 Roles y permisos,RESUELTO,S3,
+SCRUM-30,HU-14 Panel de gestión,RESUELTO,S4,
+SCRUM-31,HU-15 Vista del profesional,RESUELTO,S4,
+SCRUM-32,HU-16 Exportar para contabilidad,RESUELTO,S4,
+SCRUM-42,HU-22 Encuesta de satisfacción (enlace),RESUELTO,S4,
+SCRUM-43,HU-23 Auditoría y respaldos,En curso (se mantiene),S4,Auditoría lista; respaldo por probar en el servidor
+SCRUM-48,TEC-05 Pruebas de aceptación (UAT) con la clienta,En curso (se mantiene),S5,Requiere a la clienta
+SCRUM-49,TEC-06 Manual de usuario y capacitación,En curso (se mantiene),S5,Manual listo; falta capacitar
+SCRUM-50,TEC-07 Despliegue a producción y respaldos,En curso (se mantiene),S5,Instalación con Docker lista; falta desplegar
+SCRUM-28,HU-13 Consultar y actualizar stock de productos,RESUELTO como DESCARTADA (agregar comentario: la clienta pidió quitar el inventario),S4,Descartada
+SCRUM-34,EP-2 Ficha clínica (epic),RESUELTO,—,Todas sus historias están terminadas
+SCRUM-36,EP-4 CRM (epic),RESUELTO,—,Todas sus historias están terminadas
+SCRUM-37,EP-5 Ventas (epic),RESUELTO,—,Todas sus historias están terminadas
+SCRUM-38,EP-6 Panel (epic),RESUELTO,—,Todas sus historias están terminadas
+SCRUM-33,EP-1 Plataforma (epic),En curso (se mantiene),—,Tiene elementos pendientes
+SCRUM-35,EP-3 Agenda (epic),En curso (se mantiene),—,Tiene elementos pendientes

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deva - Iniciar Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page" data-page="login">
+
+    <div class="login-modal">
+        <div class="login-header">
+            <h1>Deva</h1>
+            <h2>Aesthetic House</h2>
+        </div>
+
+        <div class="alert alert-info">Prototipo con datos DEMO. No ingrese datos reales de pacientes.</div>
+        <div id="loginError" class="alert alert-error" hidden role="alert"></div>
+
+        <form id="loginForm" class="login-form">
+            <div class="input-group">
+                <label for="ubicacion">Ubicación</label>
+                <select id="ubicacion" name="ubicacion" required>
+                    <option value="" disabled selected>Seleccione sucursal...</option>
+                    <option value="linderos">Linderos, Buin</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ej: sdiaz" autocomplete="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="clave">Clave</label>
+                <input type="password" id="clave" name="clave" placeholder="••••••••" autocomplete="current-password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="perfil">Perfil (solo demo)</label>
+                <select id="perfil" name="perfil">
+                    <option value="admin" selected>Dirección / Administración</option>
+                </select>
+            </div>
+
+            <div class="login-footer">
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="btn-mauve">Ingresar</button>
+            </div>
+        </form>
+        <div class="login-version">Versión: 0.2.0 (prototipo)</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
