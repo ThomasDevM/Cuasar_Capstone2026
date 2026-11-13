@@ -17,8 +17,8 @@ Docker es un programa que ejecuta el sistema y su base de datos en un «contened
 1. **Instale Docker Desktop.**
    - Entre a <https://www.docker.com/products/docker-desktop> y descargue «Docker Desktop for Windows».
    - Ejecute el instalador, deje las opciones por defecto y **reinicie el computador** cuando lo pida.
-   - Abra «Docker Desktop», acepte los términos y espere a que abajo a la izquierda diga **«Engine running»** (verde). Si pide actualizar WSL 2, acepte.
-2. **Descargue el sistema.** Descomprima `capstone-sistema-repo.zip` (clic derecho → *Extraer todo*) en una carpeta simple, por ejemplo `C:\Deva`. Debe quedar la carpeta `C:\Deva\capstone` con archivos como `docker-compose.yml` e `iniciar-docker.bat`.
+   - Abra «Docker Desktop», acepte los términos y espere a que abajo a la izquierda diga **«Engine running»** (Verde). Si pide actualizar WSL 2, acepte.
+2. **Descargue el sistema.** Descomprima `capstone-sistema-repo.zip` (clic derecho → *Extraer todo*) en una carpeta simple, por ejemplo `C:\Deva`. Debe quedar la carpeta `C:\Deva\Cuasar_Capstone2026-main` con archivos como `docker-compose.yml` e `iniciar-docker.bat`.
 3. **Inicie el sistema.** Haga doble clic en **`iniciar-docker.bat`**.
    - La primera vez crea las claves de seguridad automáticamente, construye el sistema y lo inicia. **Demora entre 5 y 10 minutos**; no cierre la ventana negra.
    - Cuando termina, se abre el navegador en <http://localhost:3000>.
@@ -29,7 +29,7 @@ Docker es un programa que ejecuta el sistema y su base de datos en un «contened
    | Sandra | `sandra` | Dirección: acceso completo (crea usuarios, cambia claves, porcentajes y precios) |
    | Profesional predeterminado | `profesional` | Profesional: sin permisos de administración; debe cambiar su clave al ingresar |
 
-5. **Haga la configuración inicial** (ver sección 3).
+5. **Haga la configuración inicial**
 6. **Guarde `CLAVES-INICIALES.txt` en un lugar seguro** (y bórrelo del computador cuando ya haya cambiado las claves).
 
 **Uso diario:** abra Docker Desktop y entre a <http://localhost:3000>. El sistema vuelve a iniciar solo cuando se prende el computador (queda configurado para reiniciarse). Para detenerlo use `detener-docker.bat`; para volver a iniciarlo, `iniciar-docker.bat`. **Los datos se conservan** al detener o reiniciar.
